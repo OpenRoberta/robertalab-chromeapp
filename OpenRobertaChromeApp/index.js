@@ -259,7 +259,7 @@ onload = function () {
 		serverreq.onabort = function () {
 			// ok
 		};
-		serverreq.open("POST", "http://" + ORAHOST + "/pushcmd", true);
+		serverreq.open("POST", "http://" + ORAHOST + "/rest/pushcmd", true);
 		serverreq.setRequestHeader("Content-Type", "application/json; charset=utf8");
 		serverreq.send(JSON.stringify(ev3info));
 	}
@@ -278,7 +278,7 @@ onload = function () {
 				uploadProgram(blob, filename);
 			}
 		};
-		serverreq.open("POST", "http://" + ORAHOST + "/download", true);
+		serverreq.open("POST", "http://" + ORAHOST + "/rest/download", true);
 		serverreq.responseType = "blob";
 		serverreq.setRequestHeader("Content-Type", "application/json; charset=utf8");
 		serverreq.send(JSON.stringify(ev3info));
@@ -342,7 +342,7 @@ onload = function () {
 					ulFirmwareFile(blob, filename);
 				}
 			};
-			serverreq.open("GET", "http://" + ORAHOST + "/update/" + filenames[fileIndex], true);
+			serverreq.open("GET", "http://" + ORAHOST + "/rest/update/" + filenames[fileIndex], true);
 			serverreq.responseType = "blob";
 			serverreq.send();
 		} else {
