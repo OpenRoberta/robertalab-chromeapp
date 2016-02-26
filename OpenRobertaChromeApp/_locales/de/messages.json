@@ -30,7 +30,7 @@
     "message": "Zeige erweiterte Optionen"
   },
   "custom_server": {
-    "message": "Benutzerdefinierter Serveradresse"
+    "message": "Benutzerdefinierte Serveradresse"
   },
   "infotext_plugin": {
     "message": "Schließe dein EV3 mit dem USB Kabel an den Computer an. Er wird nach einigen Sekunden automatisch erkannt."

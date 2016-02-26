@@ -36,7 +36,7 @@ onload = function () {
 	var pushFinished = true;
 	var serverreq = null;
 
-	var filenames = ["ev3menu", "jsonlib", "shared", "runtime"];
+	var filenames = ["ev3menu", "jsonlib", "websocketlib", "shared", "runtime"];
 	var fileIndex = 0;
 
 	var blink = true;
