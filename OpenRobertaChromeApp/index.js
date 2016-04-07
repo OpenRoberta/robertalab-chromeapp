@@ -346,6 +346,7 @@ onload = function () {
 			serverreq.responseType = "blob";
 			serverreq.send();
 		} else {
+		  fileIndex = 0;
 		  restartEV3();
 			setTimeout(function () {
 			  reset();
