@@ -13,6 +13,6 @@
   "icons": { "128": "/resources/OR.png" },
   
   "permissions": [
-    "http://*/*"
+    "http://*/*", "https://*/*"
   ]
 }
