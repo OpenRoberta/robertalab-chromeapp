@@ -33,10 +33,11 @@ onload = function () {
 	var ISRUNNING = "isrunning";
 
 	var ev3info = null;
+        var lejosVersion = "";
 	var pushFinished = true;
 	var serverreq = null;
 
-	var filenames = ["ev3menu", "jsonlib", "websocketlib", "shared", "runtime"];
+	var filenames = ["ev3menu", "jsonlib", "websocketlib", "runtime"];
 	var fileIndex = 0;
 
 	var blink = true;
@@ -204,6 +205,11 @@ onload = function () {
 		brickreq.onreadystatechange = function () {
 			if (brickreq.readyState == 4 && brickreq.status == 200) {
 				ev3info = JSON.parse(brickreq.responseText);
+                                if (ev3info.firmwarename === "ev3lejosv1") {
+                                    lejosVersion = "v1/";
+                                } else {
+                                    lejosVersion = "";
+                                }
 				pushToServer(servercmd);
 			}
 			if (brickreq.readyState == 4 && brickreq.status === 0) {
@@ -342,7 +348,7 @@ onload = function () {
 					ulFirmwareFile(blob, filename);
 				}
 			};
-			serverreq.open("GET", "http://" + ORAHOST + "/rest/update/" + filenames[fileIndex], true);
+			serverreq.open("GET", "http://" + ORAHOST + "/rest/update/" + lejosVersion + filenames[fileIndex], true);
 			serverreq.responseType = "blob";
 			serverreq.send();
 		} else {
@@ -368,7 +374,7 @@ onload = function () {
 		brickreq.onreadystatechange = function () {
 			if (brickreq.readyState == 4 && brickreq.status == 200) {
 				var info = JSON.parse(brickreq.responseText);
-				fileIndex++;
+                                fileIndex++;
 				dlFirmwareFile();
 			}
 		};
