@@ -54,7 +54,7 @@
     "message": "Open Roberta Lab ist nicht erreichbar. Bitte überprüfe deine Internetverbindung."
   },
   "dialog_about": {
-    "message": "Dieses Programm ist Teil des Open Roberta Labs, eine Open-Source-Entwicklung des Fraunhofer-Instituts IAIS, im Kontext der Initiative »Roberta Lernen mit Robotern« Version 1.3.0."
+    "message": "Dieses Programm ist Teil des Open Roberta Labs, eine Open-Source-Entwicklung des Fraunhofer-Instituts IAIS, im Kontext der Initiative »Roberta Lernen mit Robotern« Version 1.5.0."
   },
   "dialog_timeout_msg": {
     "message": "Die Gültigkeitsdauer des Token ist abgelaufen. Versuche es noch mal."

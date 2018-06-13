@@ -54,7 +54,7 @@
     "message": "Open Roberta Lab is unreachable. Please check your internet connection."
   },
   "dialog_about": {
-    "message": "This program is part of the Open Roberta Lab, an open-source programming platform developed by Fraunhofer IAIS within the initiative »Roberta Learning with Robots« version 1.3.0"
+    "message": "This program is part of the Open Roberta Lab, an open-source programming platform developed by Fraunhofer IAIS within the initiative »Roberta Learning with Robots« version 1.5.0"
   },
   "dialog_timeout_msg": {
     "message": "The token is expired. Try again."
